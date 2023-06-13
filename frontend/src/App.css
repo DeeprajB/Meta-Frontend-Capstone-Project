@@ -24,15 +24,7 @@ body {
   margin-top: -22px;
 }
 
-menu {
-  list-style: none;
-  display: grid;
-}
-
-button {
-  background-color: white;
-  border: none;
-}
+/* Navbar Styling */
 
 .burger-icon {
   margin-top: 1.5rem;
@@ -43,28 +35,10 @@ a:visited, Link:visited, a:link, Link:link {
   color: black;
 }
 
-.action-button {
-  background-color: #F4CE14;
-  padding: 0.5rem 1rem 0.5rem 1rem;
-  border-radius: 0.2rem;
-  font-family: 'Karla';
-  font-size: 2rem;
+menu {
+  list-style: none;
+  display: grid;
 }
-
-.action-button:hover {
-  background-color: #495E57;
-  color:#EEEEEE;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #EDEFEE;
-  transition: 0.2s;
-}
-
-.subsection {
-  margin-top: -2rem;
-}
-
-/* Navbar Styling */
 
 .navbar-menu {
   grid-template-columns: repeat(7, 1fr);
@@ -97,11 +71,67 @@ a:visited, Link:visited, a:link, Link:link {
   margin-left: -1.25rem;
 }
 
+/* Footer Styling */
+/* FOOTER STYLING */
+footer {
+  min-height: 13rem;
+  background-color: #495E57;
+  color: #FFFFFF;
+  padding-bottom: 1rem;
+  margin-top: -1.4rem;
+}
+
+footer > menu {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.footer-header {
+  margin-bottom: -1.25rem;
+}
+
+.footer-links {
+  padding: 0;
+  list-style: none;
+}
+
+.footer-links > a, .footer-links > Link, .footer-links > li {
+  text-align: left;
+  display: block;
+  color: white;
+  padding-top: 0.2rem;
+  font-family: 'Karla', 'Sans Serif';
+
+}
+
+.footer-links > a:hover, .footer-links > Link:hover {
+  background-color: #495E57;
+  text-decoration: underline;
+}
+
+.img-footer {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-content: center;
+}
+
+.img-footer > img {
+  max-height: 8rem;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  margin-right: 3rem;
+
+  background-color: white;
+  padding: 0.5rem;
+}
 
 
 
 @media screen and (max-width: 600px) {
 
+  /* Navbar Styling */
   .desktop {
       display: none;
   }
@@ -126,4 +156,19 @@ a:visited, Link:visited, a:link, Link:link {
       margin-left: 0.5rem;
   }
 
+  /* Footer Styling */
+  footer > menu {
+    grid-template-columns: repeat(3, 1fr);
 }
+
+.contact {
+    display: none;
+}
+
+.img-footer > img {
+    margin-top: 0.5rem;
+
+}
+
+}
+
