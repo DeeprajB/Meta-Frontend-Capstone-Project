@@ -9,9 +9,11 @@ function Homepage() {
   return (
     <>
     <HeroSection />
-    <SpecialSection />
-    <TestimonialSection />
-    <AboutSection />
+    <main>
+        <SpecialSection />
+        <TestimonialSection />
+        <AboutSection />
+    </main>
     </>
   )
 }
