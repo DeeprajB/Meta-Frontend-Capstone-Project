@@ -1,38 +1,129 @@
-.App {
-  text-align: center;
+* {
+  font-family: 'Markazi Text', 'Karla', serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+label, input, select, textarea, p {
+  font-family: 'Karla';
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input, select, option, textarea {
+  background-color: #EEEEEE;
+  border: none;
+  padding: 5px 5px 5px 5px;
+  border-radius: 0.2rem;
+  resize: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+input, select {
+  width: 10rem;
+}
+
+body {
+  margin: 0; /* removes white border around website*/
+  padding: 0;
+  margin-top: -22px;
+}
+
+menu {
+  list-style: none;
+  display: grid;
+}
+
+button {
+  background-color: white;
+  border: none;
+}
+
+.burger-icon {
+  margin-top: 1.5rem;
+}
+
+a:visited, Link:visited, a:link, Link:link {
+  text-decoration: none;
+  color: black;
+}
+
+.action-button {
+  background-color: #F4CE14;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border-radius: 0.2rem;
+  font-family: 'Karla';
+  font-size: 2rem;
+}
+
+.action-button:hover {
+  background-color: #495E57;
+  color:#EEEEEE;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #EDEFEE;
+  transition: 0.2s;
+}
+
+.subsection {
+  margin-top: -2rem;
+}
+
+/* Navbar Styling */
+
+.navbar-menu {
+  grid-template-columns: repeat(7, 1fr);
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-menu > li, .navbar-menu > a, .navbar-menu > Link {
+  text-align: center;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.mobile {
+  display: none;
+}
+
+.burger {
+  display: none;
+  grid-template-columns: 5fr 1fr;
+}
+
+.hover-effect:hover {
+  background-color: #F4CE14;
+  transition: 0.25s;
+}
+
+.nav-image {
+  max-height: 4rem;
+  margin-top: 0.7rem;
+  margin-left: -1.25rem;
+}
+
+
+
+
+@media screen and (max-width: 600px) {
+
+  .desktop {
+      display: none;
   }
-  to {
-    transform: rotate(360deg);
+
+  .mobile {
+      display: grid;
+      grid-template: auto auto auto auto auto auto auto / auto;
+      align-items: center;
+      padding-left: 0;
   }
+
+  ul > * {
+      font-size: 14px;
+  }
+
+  .burger {
+      display: grid;
+  }
+
+  .burger > img {
+      margin-top: 1.5rem;
+      margin-left: 0.5rem;
+  }
+
 }
